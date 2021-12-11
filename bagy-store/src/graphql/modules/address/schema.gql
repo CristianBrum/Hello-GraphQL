@@ -1,0 +1,30 @@
+type Address {
+  storeCustomerAddressId: Int!
+  storeCustomerStreet: String!
+  storeCustomerNeighborhood: String!
+  storeCustomerCity: String!
+  storeCustomerState: String!
+  storeCustomerCountry: String!
+  storeCustomerPostalCode: String!
+  storeCustomerNumber: String!
+  customer: Customer!
+}
+
+input AddressInput {
+  customerId: Int!
+  storeCustomerStreet: String!
+  storeCustomerNeighborhood: String!
+  storeCustomerCity: String!
+  storeCustomerState: String!
+  storeCustomerCountry: String!
+  storeCustomerPostalCode: String!
+  storeCustomerNumber: String!
+}
+
+type Query {
+  allAddress: [Address!]!
+  address(id: Int!): Address
+}
+type Mutation {
+  createAddress(data: AddressInput!): Address!
+}

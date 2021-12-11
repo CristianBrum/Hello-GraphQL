@@ -1,0 +1,24 @@
+type Customer {
+  storeCustomerId: Int!
+  storeCustomerName: String!
+  storeCustomerLastName: String!
+  storeCustomerEmail: String!
+  storeCustomerDocumentNumber: String!
+  storeCustomerBirthDate: String!
+  address: [Address!]!
+}
+input CustomerInput {
+  storeCustomerName: String!
+  storeCustomerLastName: String!
+  storeCustomerEmail: String!
+  storeCustomerDocumentNumber: String!
+  storeCustomerBirthDate: String!
+}
+
+type Query {
+  customer(id: Int!): Customer
+  allCustomer: [Customer!]!
+}
+type Mutation {
+  createCustomer(data: CustomerInput!): Customer!
+}

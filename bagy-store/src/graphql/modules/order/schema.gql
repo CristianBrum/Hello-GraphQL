@@ -1,0 +1,25 @@
+type Order {
+  productOrderId: Int!
+  installments: String!
+  quantity: Int!
+  status: String!
+  storeCustomerId: Int!
+  productId: Int!
+  product: [Order!]!
+}
+
+input OrderInput {
+  installments: String!
+  quantity: Int!
+  status: String!
+  storeCustomerId: Int!
+  productId: Int!
+}
+
+type Query {
+  order(id: Int!): Order
+  allOrders: [Order!]!
+}
+type Mutation {
+  createOrder(data: OrderInput!): Order!
+}

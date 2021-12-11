@@ -1,0 +1,99 @@
+mutation {
+  createAddress(
+    customerId: 1
+    storeCustomerStreet: "Salty and Peppery"
+    storeCustomerNeighborhood: "Salt, Pepper"
+    storeCustomerCity: "Add salt, Add pepper"
+    storeCustomerState: "Add salt, Add pepper"
+    storeCustomerCountry: "Add salt, Add pepper"
+    storeCustomerPostalCode: "Add salt, Add pepper"
+    storeCustomerNumber: "Add salt, Add pepper"
+  ) {
+    storeCustomerAddressId
+    storeCustomerStreet
+    storeCustomerNeighborhood
+    storeCustomerCity
+    storeCustomerState
+    storeCustomerCountry
+    storeCustomerPostalCode
+    storeCustomerNumber
+    customer {
+      storeCustomerId
+      storeCustomerName
+      storeCustomerLastName
+      storeCustomerEmail
+      storeCustomerDocumentNumber
+      storeCustomerBirthDate
+    }
+  }
+}
+
+mutation {
+  createAddress(
+    customerId: 2
+    storeCustomerStreet: "rua assis brail"
+    storeCustomerNeighborhood: "vargas"
+    storeCustomerCity: "sapucaia do sul"
+    storeCustomerState: "RS"
+    storeCustomerCountry: "Brasil"
+    storeCustomerPostalCode: "93222360"
+    storeCustomerNumber: "281"
+  ) {
+    storeCustomerAddressId
+    storeCustomerStreet
+    storeCustomerNeighborhood
+    storeCustomerCity
+    storeCustomerState
+    storeCustomerCountry
+    storeCustomerPostalCode
+    storeCustomerNumber
+    customer {
+      storeCustomerId
+      storeCustomerName
+      storeCustomerLastName
+      storeCustomerEmail
+      storeCustomerDocumentNumber
+      storeCustomerBirthDate
+    }
+  }
+}
+
+mutation{
+  createCustomer(
+    data: {
+    storeCustomerName: "John",
+    storeCustomerLastName: "Jhones roules"
+    storeCustomerEmail: "johndoe@example.com",
+    storeCustomerDocumentNumber: "025.824.277-55",
+    storeCustomerBirthDate: "17/08/1984",
+    }
+  )
+  {
+    storeCustomerId,
+    storeCustomerName,
+    storeCustomerLastName,
+    storeCustomerEmail,
+    storeCustomerDocumentNumber,
+    storeCustomerBirthDate
+  }
+}
+
+mutation{
+  createCustomer(
+    data: {
+    storeCustomerName: "Cristian",
+    storeCustomerLastName: "Brum Oliveira"
+    storeCustomerEmail: "cristian.brum2@yahoo.com.br",
+    storeCustomerDocumentNumber: "028.955.442-05",
+    storeCustomerBirthDate: "27/04/1992",
+    }
+  )
+  {
+    storeCustomerId,
+    storeCustomerName,
+    storeCustomerLastName,
+    storeCustomerEmail,
+    storeCustomerDocumentNumber,
+    storeCustomerBirthDate
+  }
+}
